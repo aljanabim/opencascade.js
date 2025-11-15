@@ -1,5 +1,7 @@
-import init, { OpenCascadeInstance } from "./customBuild.simple";
-export * from "./customBuild.simple";
+import type init from "./ocjs.custom.index";
+import type { OpenCascadeInstance } from "./ocjs.custom.index";
+
+export * from "./ocjs.custom.index";
 
 type OpenCascadeModuleObject = {
     [key: string]: any;
