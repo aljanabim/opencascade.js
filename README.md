@@ -34,7 +34,8 @@ Build the docker image
 
 ```bash
 docker build --pull --rm -f 'Dockerfile' -t 'ocjs-base' '.'
-docker build --pull --rm -f 'Dockerfile.custom' -t 'ocjs-base-arm' '.'
+# the image below yields 2h faster image build however, all errors are not resolved and it leads to compilation errors further down the line
+# docker build --pull --rm -f 'Dockerfile.custom' -t 'ocjs-base-arm' '.'
 ```
 
 Create a YAML config file for the custom build. For a full build use the following
@@ -201,7 +202,7 @@ Start an instance of the container with config yaml file
 
 ```bash
 cd build/[build-name]
-docker run --rm -it -v "$(pwd):/src" -u "$(id -u):$(id -g)" [image-tag] config.yml
+docker run --rm -it -v "$(pwd):/src" -u "$(id -u):$(id -g)" ocjs-base config.yml
 ```
 
 # Contributing
