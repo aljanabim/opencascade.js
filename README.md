@@ -205,6 +205,9 @@ cd build/[build-name]
 docker run --rm -it -v "$(pwd):/src" -u "$(id -u):$(id -g)" ocjs-base config.yml
 ```
 
+> TODO: try building with `donalffons/opencascade.js:2.0.0-beta.54fa06a`
+> docker run --rm -it -v "$(pwd):/src" -u "$(id -u):$(id -g)" donalffons/opencascade.js:2.0.0-beta.54fa06a config.yml
+
 # Contributing
 
 Contributions are welcome! Feel free to have a look at the [todo-list](TODO.md) if you need some inspiration on what else needs to be done.
